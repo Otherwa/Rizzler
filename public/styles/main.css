@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('./transition.css');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --swup-blue: hsl(239, 50%, 30%);
+  --swup-blue-darker: hsl(238, 50%, 18%);
+  --swup-red: hsl(354, 99%, 68%);
+  --swup-green: hsl(172, 65%, 62%);
+  --link-underline-color: var(--swup-green);
+  --font-size-fluid-0: clamp(1rem, 2vw, 1.15rem);
+  --font-size-fluid-1: clamp(1.15rem, 3vw, 1.35rem);
+  --font-size-fluid-2: clamp(1.35rem, 4vw, 1.7rem);
+  --font-size-fluid-3: clamp(1.7rem, 5vw, 2.2rem);
+  --gap: clamp(1rem, 2vw, 2rem);
+  --gap-x2: calc(var(--gap) * 2);
+  --radius-round: 1000px;
+  --radius-0: 0.2em;
+  --radius-1: 0.4em;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-fluid-0);
+  line-height: 1.4;
+  color: black;
+  scrollbar-width: none;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2 {
+  margin-bottom: 1em;
+  font-size: var(--font-size-fluid-2);
+  line-height: 1.25;
+}
+
+h1 span,
+h2 span {
+  display: block;
+}
+
+.layout {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 35em;
+  margin: 0 auto;
+  padding: 2rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.subdued {
+  opacity: 0.5;
+}
+
+
+.button {
+  margin-right: 1em;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 999vw;
+  background: transparent;
+  border: 2px solid;
+  padding: .6em 1.1em;
+  transition-property: background, color;
+  transition-duration: 150ms;
+  white-space: nowrap;
+  cursor: pointer;
+  color: currentColor;
+  font: inherit;
+  font-weight: bold;
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.button--filled {
+  background: white;
+  color: var(--swup-blue);
+}
+
+.button--filled:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--swup-blue);
+}
+
+main ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+main li {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+form {
+  display: block;
+  margin: 2.5em 0;
+}
+
+textarea {
+  appearance: none;
+  height: 3rem;
+  display: inline-block;
+  border-radius: 999vw;
+  background: transparent;
+  border: 2px solid;
+  margin-right: 0.25em;
+  padding: 0.6em 1.1em;
+  transition-property: background, color;
+  transition-duration: 150ms;
+  white-space: nowrap;
+  color: currentColor;
+  font: inherit;
+
+  /* font-weight: bold;*/
+}
+
+textarea::placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+textarea:focus,
+textarea:hover {
+  background: rgba(255, 255, 255, 0.05);
+  outline: none;
+}
+
+.search {
+  background-color: var(--swup-blue-darker);
+}
+
+.search .layout {
+  position: relative;
+}
+
+.search .logo {
+  visibility: hidden;
+}
+
+.search {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
