@@ -20,7 +20,12 @@
     <div class="layout">
         <main id="swup" class="transition-main">
             <h1>
-                IDK.
+                <p style="font-family:monospace">
+                    IDK.
+                </p>
+                <br />
+                <img style="border-radius:100%"
+                    src="https://media.tenor.com/Vlr5ep-dRXMAAAAM/ryan-gosling-blade-runner2049.gif" alt="">
             </h1>
         </main>
     </div>
@@ -30,9 +35,15 @@
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/javascripts/index.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/@swup/forms-plugin@3"></script>
+    <script src="https://unpkg.com/@swup/body-class-plugin@3"></script>
     <script src="https://unpkg.com/swup@4"></script>
     <script>
-        const swup = new Swup();
+        const swup = new Swup({
+            containers: ["#swup"],
+            plugins: [new SwupFormsPlugin(), new SwupBodyClassPlugin()]
+        });
+
     </script>
 </body>
 

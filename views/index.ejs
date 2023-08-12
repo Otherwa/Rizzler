@@ -28,7 +28,7 @@
       </form>
     </main>
   </div>
-  <div class="overlay transition-overlay"></div>
+  <div class="overlay transition-overlay">HI</div>
 
   <!-- content -->
   <!-- Compiled and minified JavaScript -->
@@ -45,6 +45,13 @@
       plugins: [new SwupFormsPlugin(), new SwupBodyClassPlugin()]
     });
 
+    swup.hooks.on('page:view', (visit) => {
+      console.log("visit");
+      setTimeout(function () {
+        $('#response').show('slow');
+        $('#loading').hide('slow')
+      }, 3000); // Simulating a 3-second delay
+    });
   </script>
 </body>
 

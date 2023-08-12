@@ -1,3 +1,21 @@
+:root {
+    --swup-blue: hsl(239, 50%, 30%);
+    --swup-blue-darker: hsl(238, 50%, 18%);
+    --swup-red: hsl(354, 99%, 68%);
+    --swup-green: hsl(172, 65%, 62%);
+    --link-underline-color: var(--swup-green);
+    --font-size-fluid-0: clamp(1rem, 2vw, 1.15rem);
+    --font-size-fluid-1: clamp(1.15rem, 3vw, 1.35rem);
+    --font-size-fluid-2: clamp(1.35rem, 4vw, 1.7rem);
+    --font-size-fluid-3: clamp(1.7rem, 5vw, 2.2rem);
+    --gap: clamp(1rem, 2vw, 2rem);
+    --gap-x2: calc(var(--gap) * 2);
+    --radius-round: 1000px;
+    --radius-0: 0.2em;
+    --radius-1: 0.4em;
+    scrollbar-gutter: stable;
+}
+
 html.is-changing .transition-main {
     transition: opacity 250ms ease-in-out;
 }

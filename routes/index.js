@@ -20,6 +20,7 @@ router.route('/faq')
 
 router.route('/query')
   .post(async (req, res, next) => {
+    // ? A dedicated function
     const search = req.body.query;
     try {
       const completion = await openai.createChatCompletion({
@@ -39,13 +40,13 @@ router.route('/query')
           }
         ],
         temperature: 1,
-        max_tokens: 326,
+        max_tokens: 100,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
       });
       const ans = completion.data.choices[0].message.content;
-      res.status(200).render('search', { 'title': search, 'prompt': ans });
+      res.status(200).render('search', { 'title': search, 'prompt': ans, 'loading': true });
     } catch (error) {
       if (error.response) {
         console.log(error.response.status);

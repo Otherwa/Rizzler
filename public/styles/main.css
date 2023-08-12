@@ -7,23 +7,7 @@
   box-sizing: border-box;
 }
 
-:root {
-  --swup-blue: hsl(239, 50%, 30%);
-  --swup-blue-darker: hsl(238, 50%, 18%);
-  --swup-red: hsl(354, 99%, 68%);
-  --swup-green: hsl(172, 65%, 62%);
-  --link-underline-color: var(--swup-green);
-  --font-size-fluid-0: clamp(1rem, 2vw, 1.15rem);
-  --font-size-fluid-1: clamp(1.15rem, 3vw, 1.35rem);
-  --font-size-fluid-2: clamp(1.35rem, 4vw, 1.7rem);
-  --font-size-fluid-3: clamp(1.7rem, 5vw, 2.2rem);
-  --gap: clamp(1rem, 2vw, 2rem);
-  --gap-x2: calc(var(--gap) * 2);
-  --radius-round: 1000px;
-  --radius-0: 0.2em;
-  --radius-1: 0.4em;
-  scrollbar-gutter: stable;
-}
+
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "helvetica neue", helvetica, roboto, noto, "segoe ui", arial, sans-serif;
@@ -82,7 +66,6 @@ h2 span {
   border-radius: 999vw;
   background: transparent;
   border: 2px solid;
-  padding: .6em 1.1em;
   transition-property: background, color;
   transition-duration: 150ms;
   white-space: nowrap;
@@ -124,6 +107,7 @@ form {
 textarea {
   appearance: none;
   height: 3rem;
+  font-family: monospace !important;
   display: inline-block;
   border-radius: 999vw;
   background: transparent;
@@ -139,8 +123,14 @@ textarea {
   /* font-weight: bold;*/
 }
 
+p,
+h1 {
+  font-family: monospace;
+}
+
 textarea::placeholder {
   color: inherit;
+  font-family: monospace;
   opacity: 0.5;
 }
 
